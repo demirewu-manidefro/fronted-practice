@@ -25,6 +25,7 @@ html {
 
 body {
     color: var(--white-color);
+    background-color:var(--second-bg-color);
 }
 header {
     position: fixed;
@@ -64,14 +65,19 @@ section {
     visibility: visible;
     opacity: 1;
     overflow: auto;
+    margin-top:150px ;
 }
 .home {
     display: flex;
     align-items: center;
     gap: 5rem;
 }
+.home-detail{
+    margin-left: 100px;
+}
 .home-detail h1 {
     font-size: clamp(3.5rem, 10vw, 5.5rem);
+    margin-bottom: 20px;
 }
 .home-detail h2 {
     display: inline-block;
@@ -141,6 +147,7 @@ section {
 .home-detail .btn-sci {
     display: flex;
     align-items: center;
+    margin-top: 50px;
 }
 
 .btn {
@@ -191,15 +198,15 @@ section {
     justify-content: center;
     align-items: center;
     overflow: hidden;
-
+    margin-right: 100px;
 
 }
-img-box::before,
-img-box::before {
-    content: "";
+.img-box::before,
+.img-box::before {
+    content: "★";
     position: absolute;
-    width: 50rem;
-    height: 50rem;
+    width: 100rem;
+    height: 100rem;
     background: conic-gradient(transparent, transparent, transparent, var(--main-color));
     transform: rotate(0deg);
     animation: rotate-border 10s linear infinite;
@@ -222,3 +229,12 @@ img-box::before {
     z-index: 1;
     overflow: hidden;
 }
+.item-img{
+    position: absolute;
+    top: 3rem;
+    display: block;
+    width: 85%;
+    object-fit: cover;
+    mix-blend-mode: lighten;
+  
+} 
