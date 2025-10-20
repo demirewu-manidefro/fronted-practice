@@ -427,11 +427,11 @@ section {
 }
 
 .resume-list::-webkit-scrollbar {
-    width: .7rem;
+    width: 0.7rem;
 
 }
 
-.resume-list::-webkit-slider-thumb {
+.resume-list::-webkit-scrollbar-thumb {
     background: transparent;
     border-radius: 1rem;
 
