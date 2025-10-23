@@ -70,7 +70,8 @@ section {
 .home {
     display: flex;
     align-items: center;
-    gap: 5rem;
+    gap: 15rem;
+    margin: 100px;
 }
 .home-detail{
     margin-left: 100px;
@@ -255,7 +256,7 @@ section {
     .heading span{
     color: var(--main-color);
     }
-    margin: 100px;
+    margin: 100px 200px;
 
 }
 .services-container{
