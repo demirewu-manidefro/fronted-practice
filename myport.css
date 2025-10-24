@@ -500,7 +500,7 @@ section {
 }
 
 #skills-list {
-    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
     height: auto;
     overflow: visible;
 
@@ -518,6 +518,10 @@ section {
 #about-list {
     height: auto;
     grid-template-columns: repeat(auto-fit, minmax(25rem, 1rf));
+    
+}
+#item{
+    border: none;
 }
 
 #item {
@@ -528,12 +532,16 @@ section {
 
 #item p {
     color: var(--main-color);
-}
+    font-size: 1.8rem;
+    
+    }
+
 
 #item p span {
     color: var(--white-color);
     background: var(--second-bg-color);
     font-size: 1.8rem;
+    margin-left: 30px;
 }
 
 .portfolio-container {
