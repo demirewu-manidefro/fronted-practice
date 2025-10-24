@@ -260,6 +260,7 @@ section {
     color: var(--main-color);
     }
     margin: 100px 200px;
+    
 
 }
 .services-container{
@@ -319,7 +320,7 @@ section {
 
 .service-box {
     padding: 3rem 2.5rem;
-    background: var(--second-bg-color);
+    background: var(--bg-color);
     border: .2rem solid var(--second-bg-color);
     border-radius: 1rem;
     transition: .5s;
@@ -433,33 +434,48 @@ section {
 .resume-detail.active {
     display: block;
 }
-
 .resume-list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(45rem, 1fr));
     gap: 2rem;
     height: 45rem;
-    overflow: auto;
+    max-height: 400px;
+    overflow-y: auto;
     
+    overflow-x: hidden;
     
-
+    padding-right: 1rem;
+    
 }
 
+/* WebKit Scrollbar (vertical only) */
 .resume-list::-webkit-scrollbar {
     width: 1rem;
-
+    /* thickness of vertical scrollbar */
 }
 
-.resume-list::-webkit-scrollbar-thumb {
+/* Track (background of scrollbar) */
+.resume-list::-webkit-scrollbar-track {
     background: transparent;
+    margin-block: 0.4rem;
+    /* top/bottom gap for floating look */
     border-radius: 1rem;
-
 }
 
+/* Thumb (the draggable part) */
+.resume-list::-webkit-scrollbar-thumb {
+    background: var(--main-color);
+    
+    border-radius: 1rem;
+    border: 3px solid transparent;
+
+    background-clip: content-box;
+}
+
+/* Thumb hover effect */
 .resume-list:hover::-webkit-scrollbar-thumb {
     background: var(--main-color);
 }
-
 .resum-item {
     background: var(--bg-color);
     border-radius: .8rem;
