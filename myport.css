@@ -205,7 +205,7 @@ section {
 }
 .img-box::before,
 .img-box::before {
-    content: "★";
+    content: "";
     position: absolute;
     width: 100rem;
     height: 100rem;
@@ -214,11 +214,13 @@ section {
     animation: rotate-border 10s linear infinite;
 }
 
+
 @keyframes rotate-border {
     100% {
         transform: rotate(360deg);
     }
 }
+
 .item {
     position: relative;
     width: 100%;
