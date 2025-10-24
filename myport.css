@@ -204,7 +204,7 @@ section {
 
 }
 .img-box::before,
-.img-box::before {
+.img-box::after {
     content: "";
     position: absolute;
     width: 100rem;
