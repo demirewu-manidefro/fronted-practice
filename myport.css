@@ -26,6 +26,7 @@ html {
 body {
     color: var(--white-color);
     background-color:var(--second-bg-color);
+    zoom: 80%;
 }
 header {
     position: fixed;
@@ -220,6 +221,7 @@ section {
         transform: rotate(360deg);
     }
 }
+
 
 .item {
     position: relative;
@@ -451,7 +453,7 @@ section {
 /* WebKit Scrollbar (vertical only) */
 .resume-list::-webkit-scrollbar {
     width: 1rem;
-    /* thickness of vertical scrollbar */
+    
 }
 
 /* Track (background of scrollbar) */
@@ -485,8 +487,21 @@ section {
     flex-direction: column;
     justify-content: center;
     border: 2px solid var(--main-color);
+    font-size: 1.2rem;}
     
+/* }
+.resume-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
 }
+
+.resum-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.2rem;
+} */
 .resum-item:hover{
     box-shadow: 0 0 15px var(--main-color), 0 0 5px var(--main-color);
 }
