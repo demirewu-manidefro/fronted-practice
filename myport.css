@@ -491,7 +491,7 @@ section {
 }
 
 #skills-list {
-    display: grid;
+        display: grid;
         grid-template-columns: repeat(auto-fit, minmax(45rem, 1fr));
         gap: 2rem;
         height: 45rem;
@@ -519,43 +519,70 @@ section {
 }
 
 /* ✅ Default brand colors */
+
+/* HTML */
 #skills-list #skill-item:nth-child(1) i {
     color: #e34c26;
 }
 
-/* HTML */
+/* CSS */
 #skills-list #skill-item:nth-child(2) i {
     color: #2965f1;
 }
 
-/* CSS */
+/* JS */
 #skills-list #skill-item:nth-child(3) i {
     color: #f7df1e;
 }
 
-/* JS */
+/* Python */
 #skills-list #skill-item:nth-child(4) i {
     color: #3776ab;
 }
 
-/* Python */
+/* React */
 #skills-list #skill-item:nth-child(5) i {
     color: #61dafb;
 }
 
-/* React */
+/* Tailwind */
 #skills-list #skill-item:nth-child(6) i {
     color: #38bdf8;
 }
 
-/* Tailwind */
+/* R Language */
 #skills-list #skill-item:nth-child(7) i {
-    color: #f29111;
+    color: #276dc3;
 }
 
-/* SQL */
+/* PostgreSQL */
 #skills-list #skill-item:nth-child(8) i {
-    color: #276dc3;
+    color: #336791;
+}
+
+/* Python Flask */
+#skills-list #skill-item:nth-child(9) i {
+    color: #000000;
+    /* black or you can use #3776ab same as Python */
+}
+
+/* Django */
+#skills-list #skill-item:nth-child(10) i {
+    color: #0c4b33;}
+
+/* Jupyter Notebook */
+#skills-list #skill-item:nth-child(11) i {
+    color: #f37626;
+}
+
+/* Node.js */
+#skills-list #skill-item:nth-child(12) i {
+    color: #339933;
+}
+
+/* MongoDB */
+#skills-list #skill-item:nth-child(13) i {
+    color: #47a248;
 }
 
 /* R */
