@@ -432,12 +432,13 @@
                     <p>demirewumanidefro@gmail.com</p>
                 </div>
             </div>
-            <form action="#" class="contact-form">
-                <input type="text" placeholder="Your Name" required>
-                <input type="email" placeholder="Your Email" required>
-                <textarea placeholder="Your Message" rows="7" required></textarea>
+            <form action="mailto:demirewumanidefro@gmail.com" method="POST" enctype="text/plain" class="contact-form">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" rows="7" required></textarea>
                 <button type="submit" class="btn">Send Message</button>
             </form>
+
         </div>
     </section>
 
