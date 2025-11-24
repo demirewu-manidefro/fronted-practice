@@ -667,26 +667,6 @@ section {
     margin-left: 30px;
 }
 
-.portfolio-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 3rem;
-}
-
-.portifolio-detail {
-    display: none;
-}
-
-.portifolio-detail.active {
-    display: block;
-}
-
-.portfolio-box .numb {
-    font-size: 8rem;
-    -webkit-text-stroke: .07rem var(--white-color);
-    color: transparent;
-    line-height: 1;
-}
 
 /* portfolio section */
 .portfolio-container{
@@ -702,6 +682,7 @@ section {
 }
 .portfolio-box .num {
     font-size: 8rem;
-    -webkit-text-stroke:.07rem var(--white-color);
+    -webkit-text-stroke: .07rem var(--main-color);
+    color: transparent;
     line-height: 1;
 }
