@@ -39,6 +39,7 @@ header {
     justify-content: space-between;
     align-items: center;
     z-index: 100;
+    /* margin-bottom: 500px; */
 }
 .logo {
     font-size: 3rem;
@@ -67,6 +68,7 @@ section {
     opacity: 1;
     overflow: auto;
     margin-top:150px ;
+    scroll-margin-top: 120px;
 }
 .home {
     display: flex;
@@ -671,49 +673,64 @@ section {
 
 
 /* Portfolio Section */
-.portfolio-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    /* 3 columns for full screen */
-    gap: 3rem;
-    /* spacing between cards */
-    margin: 5rem 10rem;
+#portfolio {
+    padding: 5rem 0;
 }
 
+/* Title same style as Service */
+#portfolio .heading {
+    text-align: center;
+    font-size: 4.5rem;
+    margin-bottom: 4rem;
+}
+
+#portfolio .heading span {
+    color: var(--main-color);
+}
+
+/* Grid layout */
+.portfolio-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(50rem, 1fr));
+    gap: 3rem;
+    margin: 0 10rem;
+}
+
+/* Make heading span full row in grid */
+.portfolio-container .heading {
+    grid-column: 1 / -1;
+}
+
+/* Portfolio Card */
 .portfolio-card {
     position: relative;
     overflow: hidden;
     border-radius: 1rem;
     border: 2px solid var(--main-color);
-    transition: transform 0.4s, box-shadow 0.4s;
-    height: 20rem;
-    /* card height */
+    height: 22rem;
+    transition: 0.4s ease;
 }
 
 .portfolio-card img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    /* image fills the card */
-    display: block;
-    border-radius: 1rem;
-    transition: transform 0.4s;
+    transition: 0.4s ease;
 }
 
 .portfolio-card:hover img {
-    transform: scale(1.05);
-    /* subtle zoom on hover */
+    transform: scale(1.1);
 }
 
+/* Overlay info */
 .portfolio-info {
     position: absolute;
     bottom: 0;
-    left: 0;
     width: 100%;
     padding: 1.5rem;
-    background: rgba(31, 36, 45, 0.9);
+    background: rgba(31, 36, 45, 0.95);
     transform: translateY(100%);
-    transition: transform 0.4s;
+    transition: 0.4s ease;
 }
 
 .portfolio-card:hover .portfolio-info {
@@ -722,28 +739,18 @@ section {
 
 .portfolio-info h3 {
     font-size: 2rem;
-    margin-bottom: 0.5rem;
+    color: var(--main-color);
 }
 
 .portfolio-info p {
     font-size: 1.4rem;
-    margin-bottom: 1rem;
 }
 
-/* Responsive adjustments */
-@media screen and (max-width: 1200px) {
-    .portfolio-container {
-        grid-template-columns: repeat(2, 1fr);
-        /* 2 columns on medium screens */
-        margin: 4rem 5rem;
-    }
-}
-
-@media screen and (max-width: 768px) {
+/* Mobile: one column */
+@media (max-width: 768px) {
     .portfolio-container {
         grid-template-columns: 1fr;
-        /* 1 column on small screens */
-        margin: 3rem 2rem;
+        margin: 0 2rem;
     }
 }
 /* Contact Section */
