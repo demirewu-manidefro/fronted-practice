@@ -254,6 +254,8 @@ section {
     color: var(--main-color);
 }
 
+
+
 .services-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
