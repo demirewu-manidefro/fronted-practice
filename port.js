@@ -13,3 +13,21 @@ resumeBtn.forEach((btn, idx) =>{
         resumeDetail[idx].classList.add('active');
     });
 });
+
+  // Select the menu icon and the nav
+  const menuIcon = document.getElementById('menu-icon');
+  const nav = document.querySelector('header nav');
+
+  // Toggle the 'active' class on click
+  menuIcon.addEventListener('click', () => {
+    nav.classList.toggle('active');
+  });
+
+  // Optional: close menu when a link is clicked
+  const navLinks = document.querySelectorAll('header nav a');
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      nav.classList.remove('active');
+    });
+  });
+
