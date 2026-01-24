@@ -284,39 +284,69 @@ span {
 }
 
 /* Services Section */
+/* Services Section */
 .services-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
+    gap: 2.5rem;
+    /* Slightly more gap */
+    padding: 0 1rem;
+    /* Prevent edge sticking on small screens */
 }
 
 .services-box {
     background: var(--second-bg-color);
-    padding: 3rem 2rem;
+    padding: 4rem 3rem;
+    /* More breathing room */
     border-radius: 2rem;
     text-align: center;
     border: 0.2rem solid var(--bg-color);
     transition: 0.5s ease;
+    /* Subtle gradient for premium feel */
+    background: linear-gradient(145deg, var(--second-bg-color), #2a2f3a);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 .services-box:hover {
     border-color: var(--main-color);
-    transform: scale(1.02);
+    transform: translateY(-10px);
+    /* Lift effect */
+    box-shadow: 0 10px 25px rgba(124, 240, 61, 0.2);
+    /* Colored glow */
+    background: var(--second-bg-color);
+    /* Reset gradient or keeping it is fine, let's keep consistent bg */
 }
 
 .services-box i {
     font-size: 7rem;
     color: var(--main-color);
+    transition: 0.5s ease;
+    margin-bottom: 1.5rem;
+    display: inline-block;
+}
+
+.services-box:hover i {
+    transform: scale(1.1) rotate(360deg);
+    /* Spin and scale */
+    text-shadow: 0 0 1rem var(--main-color);
 }
 
 .services-box h3 {
     font-size: 2.6rem;
     margin: 1rem 0;
+    transition: 0.3s;
+}
+
+.services-box:hover h3 {
+    color: var(--main-color);
 }
 
 .services-box p {
     font-size: 1.6rem;
     margin-bottom: 1rem;
+    color: #ddd;
+    /* Slightly softer text */
+    line-height: 1.6;
 }
 
 /* Portfolio Section */
