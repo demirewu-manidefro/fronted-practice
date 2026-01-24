@@ -567,7 +567,7 @@ section {
     display: grid;
     grid-template-columns: 1fr 2fr;
     gap: 5rem;
-    margin: 50px 150px;
+    margin: 50px 10rem;
 }
 
 .resume-box h2 {
@@ -926,10 +926,74 @@ section {
 }
 
 /* Mobile: one column */
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
     .portfolio-container {
         grid-template-columns: 1fr;
         margin: 0 2rem;
+    }
+} */
+/* Tablet */
+@media (max-width: 1024px) {
+    #portfolio .heading {
+        font-size: 3.5rem;
+    }
+
+    .portfolio-container {
+        grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+        margin: 10rem;
+        gap: 1rem;
+        
+    }
+
+    .portfolio-card {
+        height: 20rem;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    #portfolio .heading {
+        font-size: 3rem;
+    }
+
+    .portfolio-container {
+        grid-template-columns: 1fr;
+        margin: 10rem;
+    }
+
+    .portfolio-card {
+        height: 18rem;
+    }
+
+    .portfolio-info h3 {
+        font-size: 1.8rem;
+    }
+
+    .portfolio-info p {
+        font-size: 1.3rem;
+    }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+    #portfolio .heading {
+        font-size: 2.5rem;
+    }
+
+    .portfolio-card {
+        height: 16rem;
+    }
+
+    .portfolio-info {
+        padding: 1rem;
+    }
+
+    .portfolio-info h3 {
+        font-size: 1.6rem;
+    }
+
+    .portfolio-info p {
+        font-size: 1.2rem;
     }
 }
 /* Contact Section */
