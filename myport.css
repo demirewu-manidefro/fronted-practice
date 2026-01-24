@@ -470,12 +470,18 @@ span {
     cursor: pointer;
     text-align: left;
     transition: 0.3s;
+    border: 0.2rem solid var(--bg-color);
+    /* Added subtle border */
 }
 
 .resume-btn:hover,
 .resume-btn.active {
-    background: var(--main-color);
-    color: var(--second-bg-color);
+    background: var(--bg-color);
+    /* Darker on active for contrast */
+    color: var(--main-color);
+    border-color: var(--main-color);
+    padding-left: 3rem;
+    /* Slide effect */
 }
 
 .resume-detail {
@@ -509,13 +515,20 @@ span {
     background: var(--second-bg-color);
     padding: 3rem;
     border-radius: 1rem;
-    border: 1px solid var(--border-color);
-    transition: 0.3s;
+    border: 0.2rem solid var(--bg-color);
+    transition: 0.5s ease;
+    background: linear-gradient(145deg, var(--second-bg-color), #2a2f3a);
+    /* Premium gradient */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 .resum-item:hover {
     border-color: var(--main-color);
-    transform: scale(1.02);
+    transform: translateY(-5px);
+    /* Gentle lift */
+    box-shadow: 0 5px 15px rgba(124, 240, 61, 0.2);
+    /* Glow */
+    background: var(--second-bg-color);
 }
 
 .year {
@@ -777,8 +790,17 @@ span {
         padding: 10rem 3% 2rem;
     }
 
-    .services-container {
+    .services-container,
+    .resume-container {
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    .resume-container {
+        /* Resume needs to stack earlier or handle 2 cols better. 
+            Let's keep 2 cols if space, or stack if strict tablet. 
+            Actually, user asked for stack on tablet. */
+        grid-template-columns: 1fr;
+        gap: 3rem;
     }
 
     .portfolio-container {
@@ -850,10 +872,6 @@ span {
     }
 
     .services-container {
-        grid-template-columns: 1fr;
-    }
-
-    .resume-container {
         grid-template-columns: 1fr;
     }
 
