@@ -799,6 +799,8 @@ span {
     /* Maintain text color */
     display: block;
     /* Ensure correct sizing for anchor */
+    overflow: hidden;
+    /* Hide iframe overflow */
 }
 
 .cert-box:hover {
@@ -806,6 +808,26 @@ span {
     border-color: #ffd700;
     /* Gold for certs */
     box-shadow: 0 0 20px rgba(255, 215, 0, 0.2);
+}
+
+/* Image/Frame Container */
+.cert-img-box {
+    width: 100%;
+    height: 15rem;
+    /* Thumbnail height */
+    overflow: hidden;
+    border-radius: 1rem;
+    margin-bottom: 2rem;
+    background: #fff;
+    /* White bg for PDF contrast */
+    position: relative;
+    pointer-events: none;
+    /* Let clicks pass through to the anchor link */
+}
+
+/* Hide default icons for visual cards */
+a.cert-box i {
+    display: none;
 }
 
 .cert-box i {
