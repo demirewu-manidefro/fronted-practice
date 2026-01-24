@@ -143,14 +143,17 @@ section {
     display: flex;
     align-items: center;
     gap: 15rem;
-    margin: 100px;
+    /* margin: 100px; */
+    /* margin-left: 10rem; */
 }
 .home-detail{
-    margin-left: 100px;
+    margin-left: 10rem;
+    
 }
 .home-detail h1 {
     font-size: clamp(3.5rem, 10vw, 5.5rem);
     margin-bottom: 20px;
+    
 }
 .home-detail h2 {
     display: inline-block;
@@ -215,6 +218,7 @@ section {
 .home-detail p {
     font-size: 1.6rem;
     margin-top: 1rem 0 2.5rem;
+    
 }
 
 .home-detail .btn-sci {
@@ -408,8 +412,8 @@ section {
 .services-container{
     display: grid;
     grid-template-columns:repeat( auto-fit, minmax(40rem,1fr));
-    gap: 2rem;
-   
+    gap: 1rem;
+    margin: 100px 10rem;
 }
 .service-box{
     padding: 3rem 2.5rem;
@@ -451,7 +455,7 @@ section {
     transform: rotate(225deg);
 }
 .service-box .deme{
-    font-size: 3rem;
+    font-size: 2.3rem;
     margin:.5rem 0 2rem;
     transition: .5s;
 }
