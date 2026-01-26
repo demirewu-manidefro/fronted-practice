@@ -363,14 +363,17 @@ span {
     box-shadow: 0 0 1rem var(--bg-color);
     overflow: hidden;
     display: flex;
-    height: 300px;
+    aspect-ratio: 16 / 9;
+    background: var(--second-bg-color);
 }
 
 .portfolio-box img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
+    object-position: center;
     transition: 0.5s ease;
+    background: var(--second-bg-color);
 }
 
 .portfolio-box:hover img {
