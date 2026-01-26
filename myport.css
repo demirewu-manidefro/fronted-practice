@@ -350,30 +350,36 @@ span {
 }
 
 /* Portfolio Section */
+
+/* Portfolio Section */
 .portfolio-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    align-items: center;
-    gap: 2.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    align-items: start;
+    gap: 2rem;
+    padding: 2rem 1rem;
+    justify-items: center;
 }
 
 .portfolio-box {
     position: relative;
-    border-radius: 2rem;
+    border-radius: 1rem;
+    /* Standard professional radius */
     box-shadow: 0 0 1rem var(--bg-color);
     overflow: hidden;
     display: flex;
     aspect-ratio: 16 / 9;
+    /* Standard screen ratio */
+    width: 100%;
     background: var(--second-bg-color);
 }
 
 .portfolio-box img {
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: cover;
     object-position: center;
     transition: 0.5s ease;
-    background: var(--second-bg-color);
 }
 
 .portfolio-box:hover img {
