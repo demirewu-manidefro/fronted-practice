@@ -14,61 +14,11 @@ ScrollReveal().reveal('.home-content h1, .about-img', { origin: 'left' });
 ScrollReveal().reveal('.home-content p, .about-content', { origin: 'right' });
 
 
-/* Contact Form Handling */
-const contactForm = document.getElementById('contactForm');
-if (contactForm) {
-  contactForm.addEventListener('submit', async function (e) {
-    e.preventDefault();
-
-    const messageDiv = document.getElementById('form-message');
-    const submitBtn = contactForm.querySelector('.btn');
-    const originalBtnText = submitBtn.innerText;
-
-    // Basic Client-side Validation
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const message = document.getElementById('message').value;
-
-    if (!name || !email || !message) {
-      messageDiv.innerText = "Please fill in all required fields.";
-      messageDiv.className = "error";
-      return;
-    }
-
-    // Loading State
-    submitBtn.innerText = "Sending...";
-    submitBtn.disabled = true;
-    messageDiv.innerText = "";
-
-    // Prepare Data
-    const formData = new FormData(contactForm);
-
-    try {
-      const response = await fetch("https://formsubmit.co/ajax/demirewumanidefro@gmail.com", {
-        method: "POST",
-        body: formData
-      });
-
-      const result = await response.json();
-
-      if (response.ok) {
-        messageDiv.innerText = "Message sent successfully!";
-        messageDiv.className = "success";
-        contactForm.reset();
-      } else {
-        messageDiv.innerText = result.message || "Something went wrong. Please try again.";
-        messageDiv.className = "error";
-      }
-    } catch (error) {
-      console.error('Error:', error);
-      messageDiv.innerText = "Failed to send message. Check your connection.";
-      messageDiv.className = "error";
-    } finally {
-      submitBtn.innerText = originalBtnText;
-      submitBtn.disabled = false;
-    }
-  });
-}
+/* Contact Form Handling - Disabled to allow standard HTML FormSubmit */
+// const contactForm = document.getElementById('contactForm');
+// if (contactForm) {
+//   // Standard form submission handles this now via valid HTML attributes
+// }
 
 
 /* Sticky Navbar */
